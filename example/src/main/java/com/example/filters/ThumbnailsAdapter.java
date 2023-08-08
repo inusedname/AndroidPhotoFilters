@@ -1,11 +1,13 @@
 package com.example.filters;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.nineoldandroids.view.ViewHelper;
 
 import java.util.List;
@@ -16,8 +18,8 @@ import java.util.List;
 public class ThumbnailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final String TAG = "THUMBNAILS_ADAPTER";
     private static int lastPosition = -1;
-    private ThumbnailCallback thumbnailCallback;
-    private List<ThumbnailItem> dataSet;
+    private final ThumbnailCallback thumbnailCallback;
+    private final List<ThumbnailItem> dataSet;
 
     public ThumbnailsAdapter(List<ThumbnailItem> dataSet, ThumbnailCallback thumbnailCallback) {
         Log.v(TAG, "Thumbnails Adapter has " + dataSet.size() + " items");

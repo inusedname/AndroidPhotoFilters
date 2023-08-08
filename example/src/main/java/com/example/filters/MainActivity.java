@@ -1,33 +1,30 @@
 package com.example.filters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.zomato.photofilters.FilterPack;
 import com.zomato.photofilters.imageprocessors.Filter;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements ThumbnailCallback {
     static {
         System.loadLibrary("NativeImageProcessor");
     }
 
-    private Activity activity;
+    int drawable;
+    private AppCompatActivity activity;
     private RecyclerView thumbListView;
     private ImageView placeHolderImageView;
-    int drawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
