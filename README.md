@@ -1,26 +1,30 @@
 # Android Photo Filters
 
-[ ![Download](https://api.bintray.com/packages/androidhive-info/maven/imagefilters/images/download.svg) ](https://bintray.com/androidhive-info/maven/imagefilters/_latestVersion)
-[ ![Example](https://img.shields.io/badge/Example-Instagram%20Filters-green.svg)](https://www.androidhive.info/2017/11/android-building-image-filters-like-instagram/)
+[![](https://jitpack.io/v/inusedname/AndroidPhotoFilters.svg)](https://jitpack.io/#inusedname/AndroidPhotoFilters)
 
-This library is forked from [here](https://github.com/Zomato/AndroidPhotoFilters). All credits goes to respective owners.
-
-An example article demonstrating Instagram Like Interface can be found [here](https://www.androidhive.info/2017/11/android-building-image-filters-like-instagram/)
-
-![Instagram Filters](https://www.androidhive.info/wp-content/uploads/2017/11/android-instagram-filters-youtube-min.jpg)
+This library is forked from [here](https://github.com/emonm/AndroidPhotoFilters). All credits goes to respective owners.
+This fork version migrates all deprecated `android.support` to 'androidx.appcompat' so you can completely set jetifier to false
+I also upgrade targetSdk to 33
 
 ## How to use the Library
 
-1. Include the Filters library in build.gradle
-```java
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    // ...
- 
-    implementation 'info.androidhive:imagefilters:1.0.7'
+0. Add to root (build.gradle (project)) at the end of repositories:
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
 }
-
 ```
+
+1. Include the Filters library in build.gradle
+```groovy
+dependencies {
+    implementation 'com.github.inusedname:AndroidPhotoFilters:1.0.7.2'
+}
+```
+Latest version: [![](https://jitpack.io/v/inusedname/AndroidPhotoFilters.svg)](https://jitpack.io/#inusedname/AndroidPhotoFilters)
 
 2. Load the native library in your activity
 ```java
